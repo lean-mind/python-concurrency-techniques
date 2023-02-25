@@ -6,7 +6,7 @@ from datetime import datetime
 
 def main():
     start_time = datetime.now()
-    print(f"{colorama.Fore.GREEN} -> Program started")
+    print(f"{colorama.Fore.GREEN} -> Program started", flush=True)
     with concurrent.futures.ProcessPoolExecutor(max_workers=2) as executor:
         first_task_future = executor.submit(first_task)
         second_task_future = executor.submit(second_task)
